@@ -12,7 +12,7 @@
  stage('Build'){
  sh "$mavenHome/bin/mvn clean package"
  }
- stage('ExecuteSonarQubeReport'){
+ /*stage('ExecuteSonarQubeReport'){
  sh "$mavenHome/bin/mvn  sonar:sonar"
  }
 
@@ -27,7 +27,7 @@ sh "scp -o StrictHostKeyChecking=no  target/maven-web-application.war ec2-user@3
 
 
 }
-}
+}*/
 /*stage('SendEmailNotification'){
 
 mail bcc: '', body: 'buildover', cc: 'rakeshuppununthala@gmail.com', from: '44rakee@gmail.com', replyTo: 'rakeshuppununthala@gmail.com', subject: 'buildover', to: 'rakeshuppununthala@gmail.com'
